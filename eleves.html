@@ -1,0 +1,30 @@
+<head>
+    <title>Web2 G1 HETIC</title>
+</head>
+
+<body>
+<h1>Liste des élèves</h1>
+
+{{> eleves }}
+</body>
+
+<template name="eleves">
+    <ul>
+        {{#each all_eleves}}
+            <li> {{ name }} {{ firstname }}
+                <button class="btn btn-danger" id="click_delete" type="button">delete</button>
+                <input id="name_u" type="text" name="name" placeholder="Nom">
+                <input id="firstname_u" type="text" name="firstname" placeholder="Prenom">
+              <button class="btn btn-succcess" id="click_update">UPDATE</button>
+            </li>
+        {{/each}}
+    </ul>
+
+    <hr/>
+    <div id="form">
+        <div>Ajouter un nouvel élève :</div>
+        <input id="name" type="text" placeholder="Nom"/>
+        <input id="firstname" type="text" placeholder="Prenom"/>
+        <button class="btn btn-success" id="submit_eleve">Nouvel elève</button>
+    </div>
+</template>
