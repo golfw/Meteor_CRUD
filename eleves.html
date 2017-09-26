@@ -3,7 +3,7 @@
 </head>
 
 <body>
-<h1>Liste des élèves</h1>
+<h1>List of students :</h1>
 
 {{> eleves }}
 </body>
@@ -13,9 +13,9 @@
         {{#each all_eleves}}
             <li> {{ name }} {{ firstname }}
                 <button class="btn btn-danger" id="click_delete" type="button">delete</button>
-                <input id="name_u" type="text" name="name" placeholder="Nom">
-                <input id="firstname_u" type="text" name="firstname" placeholder="Prenom">
-              <button class="btn btn-succcess" id="click_update">UPDATE</button>
+                <input id="name_u" type="text" name="name" placeholder="lastname">
+                <input id="firstname_u" type="text" name="firstname" placeholder="firstname">
+              <button class="btn btn-succcess" id="click_update">Update</button>
             </li>
         {{/each}}
     </ul>
@@ -23,8 +23,8 @@
     <hr/>
     <div id="form">
         <div>Ajouter un nouvel élève :</div>
-        <input id="name" type="text" placeholder="Nom"/>
-        <input id="firstname" type="text" placeholder="Prenom"/>
-        <button class="btn btn-success" id="submit_eleve">Nouvel elève</button>
+        <input id="name" type="text" placeholder="lastname"/>
+        <input id="firstname" type="text" placeholder="firstname"/>
+        <button class="btn btn-success" id="submit_eleve">Add new student</button>
     </div>
 </template>
